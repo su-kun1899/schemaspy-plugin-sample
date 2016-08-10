@@ -9,30 +9,37 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
-    <reporting>
+    <build>
         <plugins>
             <plugin>
-                <groupId>com.higedrum.schemaspy</groupId>
-                <artifactId>maven-schemaspy-plugin</artifactId>
-                <version>1.0.3</version>
+                <groupId>com.higedrum</groupId>
+                <artifactId>schemaspy-maven-plugin</artifactId>
                 <configuration>
                     <databaseType>mysql</databaseType>
-                    <database>sample</database>
                     <host>localhost</host>
                     <user>root</user>
+                    <dbName>sample</dbName>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
                 </configuration>
+                <executions>
+                    <execution>
+                        <phase>site</phase>
+                        <goals>
+                            <goal>schemaspy</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
+                <!--上位でVersion指定されていないらしく、警告が出るのでその対応-->
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.4</version>
-                <configuration>
-                    <!-- disable all the default Maven reports -->
-                    <generateReports>false</generateReports>
-                </configuration>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
             </plugin>
+
         </plugins>
-    </reporting>
+    </build>
+
 
     <pluginRepositories>
         <pluginRepository>
