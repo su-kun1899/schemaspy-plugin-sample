@@ -13,6 +13,4 @@ dependencies:
     - mvn dependency:resolve
 test:
   override:
-    - mvn integration-test
-  post:
     - mvn site
