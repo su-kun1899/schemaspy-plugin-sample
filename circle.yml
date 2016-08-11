@@ -1,0 +1,18 @@
+machine:
+  java:
+    version: oraclejdk8
+genearl:
+  artifacts:
+    - "target/schemaspy"
+database:
+  post:
+    - mysql -u root --execute "create database if not exists sample character set utf8"
+    - mysql -u root sample < src/main/resources/sample.sql
+dependencies:
+  override:
+    - mvn dependency:resolve
+test:
+  override:
+    - mvn integration-test
+  post:
+    - mvn site
