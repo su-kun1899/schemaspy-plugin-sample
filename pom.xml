@@ -15,7 +15,7 @@
             <plugin>
                 <groupId>red.sukun1899</groupId>
                 <artifactId>schemaspy-maven-plugin</artifactId>
-                <version>1.0.1</version>
+                <version>1.0.2-SNAPSHOT</version>
                 <configuration>
                     <databaseType>mysql</databaseType>
                     <host>localhost</host>
@@ -57,7 +57,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>su-kun1899 GitHub</id>
-            <url>https://su-kun1899.github.io/mvn-repo/</url>
+            <url>http://su-kun1899.github.io/maven/</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
