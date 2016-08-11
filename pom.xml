@@ -15,13 +15,12 @@
             <plugin>
                 <groupId>red.sukun1899</groupId>
                 <artifactId>schemaspy-maven-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.1</version>
                 <configuration>
                     <databaseType>mysql</databaseType>
                     <host>localhost</host>
                     <user>root</user>
                     <dbName>sample</dbName>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
