@@ -56,3 +56,5 @@ CREATE TABLE `publisher` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2016-08-05 10:47:46
+
+ALTER TABLE `book` ADD `author` varchar(40) NOT NULL COMMENT '著者';
