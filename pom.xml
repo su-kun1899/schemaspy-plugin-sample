@@ -15,7 +15,7 @@
             <plugin>
                 <groupId>red.sukun1899</groupId>
                 <artifactId>schemaspy-maven-plugin</artifactId>
-                <version>1.0.2-SNAPSHOT</version>
+                <version>1.0.2</version>
                 <configuration>
                     <databaseType>mysql</databaseType>
                     <host>localhost</host>
@@ -54,10 +54,6 @@
             <releases>
                 <updatePolicy>never</updatePolicy>
             </releases>
-        </pluginRepository>
-        <pluginRepository>
-            <id>su-kun1899 GitHub</id>
-            <url>http://su-kun1899.github.io/maven/</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
