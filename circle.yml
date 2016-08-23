@@ -1,9 +1,6 @@
 machine:
   java:
     version: oraclejdk8
-general:
-  artifacts:
-    - "target/schemaspy"
 database:
   post:
     - mysql -u root --execute "create database if not exists sample character set utf8"
@@ -13,7 +10,13 @@ dependencies:
 test:
   pre:
     - mvn flyway:info
-    - mvn flyway:migrate
-    - mvn flyway:info
   override:
-    - mvn schemaspy:schemaspy
+    - mvn flyway:migrate
+  post:
+    - mvn flyway:info
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - mvn schemaspy:schemaspy
+      - .circleci/deploy.sh
