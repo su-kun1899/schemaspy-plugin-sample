@@ -16,12 +16,7 @@ test:
     - mvn flyway:info
 deployment:
   deploy:
-    branch: deploy_page
+    branch: master
     commands:
       - mvn schemaspy:schemaspy
-      - git config --global user.email higedrum.coz@gmail.com
-      - git config --global user.name su-kun1899
-      - git add -A
-      - git commit ./docs/* -m "Update schemaSpy html [ci skip]"
-      - git push git@github.com:su-kun1899/schemaspy-plugin-sample.git $CIRCLE_BRANCH
       - .circleci/deploy.sh
