@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<database name="sample" type="MySQL - 5.7.11">
+<database name="sample" type="MySQL - 5.5.49-0ubuntu0.12.04.1">
    <tables>
       <table name="book" numRows="0" remarks="書籍" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="isbn" nullable="false" remarks="ISBN" size="19" type="BIGINT"/>
@@ -24,6 +24,25 @@
          <primaryKey column="publisherid" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="publisherid"/>
+         </index>
+      </table>
+      <table name="schema_version" numRows="1" remarks="" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="installed_rank" nullable="false" remarks="" size="10" type="INT"/>
+         <column autoUpdated="false" digits="0" id="1" name="version" nullable="true" remarks="" size="50" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="2" name="description" nullable="false" remarks="" size="200" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="3" name="type" nullable="false" remarks="" size="20" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="4" name="script" nullable="false" remarks="" size="1000" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="5" name="checksum" nullable="true" remarks="" size="10" type="INT"/>
+         <column autoUpdated="false" digits="0" id="6" name="installed_by" nullable="false" remarks="" size="100" type="VARCHAR"/>
+         <column autoUpdated="false" defaultValue="CURRENT_TIMESTAMP" digits="0" id="7" name="installed_on" nullable="false" remarks="" size="19" type="TIMESTAMP"/>
+         <column autoUpdated="false" digits="0" id="8" name="execution_time" nullable="false" remarks="" size="10" type="INT"/>
+         <column autoUpdated="false" digits="0" id="9" name="success" nullable="false" remarks="" size="0" type="BIT"/>
+         <primaryKey column="installed_rank" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="installed_rank"/>
+         </index>
+         <index name="schema_version_s_idx" unique="false">
+            <column ascending="true" name="success"/>
          </index>
       </table>
    </tables>
