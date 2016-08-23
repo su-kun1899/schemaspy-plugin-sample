@@ -16,6 +16,10 @@
             <column ascending="true" name="publisherid"/>
          </index>
       </table>
+      <table name="person" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="person_id" nullable="false" remarks="" size="10" type="INT"/>
+         <column autoUpdated="false" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="VARCHAR"/>
+      </table>
       <table name="publisher" numRows="0" remarks="出版社" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="publisherid" nullable="false" remarks="出版社ID" size="10" type="INT UNSIGNED">
             <child column="publisherid" foreignKey="book_ibfk_1" implied="false" onDeleteCascade="false" table="book"/>
@@ -26,7 +30,7 @@
             <column ascending="true" name="publisherid"/>
          </index>
       </table>
-      <table name="schema_version" numRows="1" remarks="" type="TABLE">
+      <table name="schema_version" numRows="2" remarks="" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="installed_rank" nullable="false" remarks="" size="10" type="INT"/>
          <column autoUpdated="false" digits="0" id="1" name="version" nullable="true" remarks="" size="50" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="description" nullable="false" remarks="" size="200" type="VARCHAR"/>

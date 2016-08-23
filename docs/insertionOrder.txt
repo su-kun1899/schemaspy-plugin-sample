@@ -1,3 +1,4 @@
 publisher
 book
+person
 schema_version
