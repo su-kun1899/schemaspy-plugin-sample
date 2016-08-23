@@ -16,5 +16,6 @@ test:
     - mvn schemaspy:schemaspy
 deployment:
   deploy:
+    branch: deploy_page
     commands:
       - .circleci/deploy.sh
