@@ -13,4 +13,4 @@ dependencies:
     - mvn dependency:resolve
 test:
   override:
-    - mvn site
+    - mvn red.sukun1899:schemaspy-maven-plugin:schemaspy
