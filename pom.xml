@@ -21,6 +21,7 @@
                     <host>localhost</host>
                     <user>root</user>
                     <dbName>sample</dbName>
+                    <outputDirectory>docs</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
