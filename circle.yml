@@ -14,3 +14,7 @@ test:
     - mvn flyway:info
   override:
     - mvn schemaspy:schemaspy
+deployment:
+  deploy:
+    commands:
+      - .circleci/deploy.sh
