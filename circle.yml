@@ -1,6 +1,9 @@
 machine:
   java:
     version: oraclejdk8
+general:
+   artifacts:
+     - "docs"
 database:
   post:
     - mysql -u root --execute "create database if not exists sample character set utf8"
