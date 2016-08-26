@@ -2,8 +2,8 @@ machine:
   java:
     version: oraclejdk8
 general:
-  artifacts:
-    - docs
+   artifacts:
+     - "docs"
 database:
   post:
     - mysql -u root --execute "create database if not exists sample character set utf8"
@@ -23,3 +23,4 @@ deployment:
     commands:
       - mvn schemaspy:schemaspy
       - .circleci/deploy.sh
+      - mv docs $CIRCLE_ARTIFACTS
