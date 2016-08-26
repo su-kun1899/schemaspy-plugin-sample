@@ -16,6 +16,10 @@
             <column ascending="true" name="publisherid"/>
          </index>
       </table>
+      <table name="demo_msa" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="demo_id" nullable="false" remarks="" size="10" type="INT"/>
+         <column autoUpdated="false" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="VARCHAR"/>
+      </table>
       <table name="person" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="person_id" nullable="false" remarks="" size="10" type="INT"/>
          <column autoUpdated="false" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="VARCHAR"/>
@@ -30,7 +34,7 @@
             <column ascending="true" name="publisherid"/>
          </index>
       </table>
-      <table name="schema_version" numRows="2" remarks="" type="TABLE">
+      <table name="schema_version" numRows="3" remarks="" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="installed_rank" nullable="false" remarks="" size="10" type="INT"/>
          <column autoUpdated="false" digits="0" id="1" name="version" nullable="true" remarks="" size="50" type="VARCHAR"/>
          <column autoUpdated="false" digits="0" id="2" name="description" nullable="false" remarks="" size="200" type="VARCHAR"/>

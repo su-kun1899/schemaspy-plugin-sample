@@ -1,4 +1,5 @@
 publisher
 book
+demo_msa
 person
 schema_version
