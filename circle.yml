@@ -23,7 +23,4 @@ deployment:
     commands:
       - mvn schemaspy:schemaspy
       - .circleci/deploy.sh
-    branch: artifact_path
-    commands:
-      - mvn schemaspy:schemaspy
       - mv docs $CIRCLE_ARTIFACTS
