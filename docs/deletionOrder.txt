@@ -1,5 +1,6 @@
 schema_version
 person
 demo_msa
+demo_kaipoke
 book
 publisher
