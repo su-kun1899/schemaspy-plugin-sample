@@ -8,6 +8,16 @@ database:
   post:
     - mysql -u root --execute "create database if not exists sample character set utf8"
 dependencies:
+  cache_directories:
+    - graphviz-2.38.0
+  pre:
+    - wget -O graphviz.tar.gz --quiet http://www.graphviz.org/pub/graphviz/ARCHIVE/graphviz-2.38.0.tar.gz
+    - tar -zxf graphviz.tar.gz
+    - graphviz-2.38.0/configure --silent
+    - make --silent --ignore-errors && make --silent --ignore-errors install > /dev/null
+    - echo 'which dot && version:'
+    - which dot
+    - dot -V
   override:
     - mvn dependency:resolve
 test:
