@@ -8,9 +8,6 @@ database:
   post:
     - mysql -u root --execute "create database if not exists sample character set utf8"
 dependencies:
-  pre:
-    - sudo dpkg -i ./.circleci/graphviz-dev_2.38.0-1-precise_all.deb
-    - dot -V
   override:
     - mvn dependency:resolve
 test:
