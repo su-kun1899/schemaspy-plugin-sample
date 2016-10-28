@@ -13,6 +13,7 @@
     <properties>
         <database.type>mysql</database.type>
         <database.host>localhost</database.host>
+        <database.port>3306</database.port>
         <database.user>root</database.user>
         <database.dbName>sample</database.dbName>
     </properties>
@@ -22,10 +23,11 @@
             <plugin>
                 <groupId>red.sukun1899</groupId>
                 <artifactId>schemaspy-maven-plugin</artifactId>
-                <version>1.1.0</version>
+                <version>1.2.1</version>
                 <configuration>
                     <databaseType>${database.type}</databaseType>
                     <host>${database.host}</host>
+                    <port>${database.port}</port>
                     <user>${database.user}</user>
                     <dbName>${database.dbName}</dbName>
                     <outputDirectory>docs</outputDirectory>
@@ -36,7 +38,9 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.0.3</version>
                 <configuration>
-                    <url>jdbc:${database.type}://${database.host}:3306/${database.dbName}</url>
+                    <url>
+                        jdbc:${database.type}://${database.host}:${database.port}/${database.dbName}
+                    </url>
                     <user>${database.user}</user>
                 </configuration>
                 <dependencies>
