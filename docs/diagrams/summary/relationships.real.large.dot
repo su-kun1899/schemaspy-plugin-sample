@@ -1,4 +1,4 @@
-// dot 2.38.0 on Mac OS X 10.12.1
+// dot 2.26.3 on Linux 3.13.0-100-generic
 // SchemaSpy rev Unknown
 digraph "largeRelationshipsDiagram" {
   graph [
