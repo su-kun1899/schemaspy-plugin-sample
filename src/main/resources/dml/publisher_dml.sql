@@ -16,26 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `publisher`
---
-
-DROP TABLE IF EXISTS `publisher`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `publisher` (
-  `publisherid` int(10) unsigned NOT NULL COMMENT '出版社ID',
-  `name` varchar(40) NOT NULL COMMENT '出版社名',
-  PRIMARY KEY (`publisherid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='出版社';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `publisher`
 --
 
 LOCK TABLES `publisher` WRITE;
 /*!40000 ALTER TABLE `publisher` DISABLE KEYS */;
-INSERT INTO `publisher` VALUES (1,'ふーたく'),(2,'ひさっしゅ'),(3,'すーくん');
+INSERT INTO `publisher` (`publisherid`, `name`) VALUES (1,'ふーたく'),(2,'ひさっしゅ'),(3,'すーくん');
 /*!40000 ALTER TABLE `publisher` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-02 20:40:53
+-- Dump completed on 2016-11-02 21:12:11
