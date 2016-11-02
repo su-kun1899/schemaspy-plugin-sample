@@ -26,3 +26,5 @@ buildNumber.properties
 
 # Created by .ignore support plugin (hsz.mobi)
 
+.idea
+schemaspy-plugin-sample.iml
